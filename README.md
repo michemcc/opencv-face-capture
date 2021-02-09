@@ -13,4 +13,4 @@ Face capture web application using Python and OpenCV, implemented in Django
   `python manage.py runserver`
 
 ## Notes
-The face capture app uses Haar Cascade object detection for the biometric identification. The files are not my own and are sourced from [the opencv data repo|https://github.com/opencv/opencv/tree/master/data/haarcascades]. For more information on Haar Cascades, sentdex has a good video [here|https://github.com/opencv/opencv/tree/master/data/haarcascades]. Thank you for reading.
+The face capture app uses Haar Cascade object detection for the biometric identification. The files are not my own and are sourced from [the opencv data repo](https://github.com/opencv/opencv/tree/master/data/haarcascades). For more information on Haar Cascades, sentdex has a good video [here](https://github.com/opencv/opencv/tree/master/data/haarcascades). Thank you for reading.
