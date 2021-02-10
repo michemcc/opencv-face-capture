@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Opencv-Django</title>
+    <title>OpenCV Face Detect</title>
   </head>
   <body>
-
+    <h1>Detect a face</h1>
     <form method="POST" enctype="multipart/form-data">
       {% csrf_token %}
       {{ form.as_p }}
@@ -13,12 +13,11 @@
     </form>
 
     {% if post %}
-      <!-- post.document : ImageUploadModel Class에 선언되어 있는 "document"에 해당 (브라우저 확인) -->
       <img src="{{ post.document.url }}">
       <p>Uploaded file @ : <a href="{{ post.document.url }}">{{ post.document }}</a></p>
     {% endif %}
 
-    <p><a href="{% url 'opencv_webapp:detect_face' %}">Return to home</a></p>
+    <p><a href="/">Return home</a></p>
 
   </body>
 </html>
