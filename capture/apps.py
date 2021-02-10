@@ -1,4 +1,4 @@
 from django.apps import AppConfig
 
-class OpencvWebappConfig(AppConfig):
+class OpenCVFaceCaptureConfig(AppConfig):
     name = 'capture'

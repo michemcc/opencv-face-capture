@@ -1,7 +1,8 @@
 from django.conf import settings
 import numpy as np
 import cv2
-def cv_detect_face(path):
+
+def detect_face(path):
    img = cv2.imread(path, 1)
    if (type(img) is np.ndarray):
        print(img.shape)
@@ -18,12 +19,11 @@ def cv_detect_face(path):
        if resize_needed == True:
             img = cv2.resize(img, (int(new_w), int(new_h)))
 
-       # Haar-based Cascade Classifier
+       # Haar Cascade Classifier
        baseUrl = settings.MEDIA_ROOT_URL + settings.MEDIA_URL
        face_cascade = cv2.CascadeClassifier(baseUrl+'haarcascade_frontalface_default.xml')
        eye_cascade = cv2.CascadeClassifier(baseUrl+'haarcascade_eye.xml')
        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-	# detectMultiScale(Original img, ScaleFactor, minNeighbor) : further info. @ http://j.mp/2SxjtKR
        faces = face_cascade.detectMultiScale(gray, 1.3, 5)
        for (x, y, w, h) in faces:
            cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
@@ -34,5 +34,5 @@ def cv_detect_face(path):
                cv2.rectangle(roi_color, (ex, ey), (ex+ew, ey+eh), (0, 255, 0), 2)
        cv2.imwrite(path, img)
    else:
-       print('Error occurred within cv_detect_face!')
+       print('Error occurred during face detection')
        print(path) 

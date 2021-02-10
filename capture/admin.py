@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import ImageUploadModel
 # Register your models here.
 
-class Image_upload_Admin(admin.ModelAdmin):
+class ImageUploadAdmin(admin.ModelAdmin):
     list_display = ('description', 'document', )
 
-admin.site.register(ImageUploadModel, Image_upload_Admin)
+admin.site.register(ImageUploadModel, ImageUploadAdmin)
