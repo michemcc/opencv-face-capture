@@ -1,2 +1,5 @@
 # Secret settings
 secret.py
+
+# Apple desktop services file
+.DS_Store
