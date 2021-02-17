@@ -1,0 +1,56 @@
+{% load static %}
+
+    <!---navigation bar--->
+    <nav class="navbar nav-down navbar-expand-lg navbar-default navbar-fixed-top" id="navbarMain">
+      <div class="container">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">OpenCV Face Capture</a>
+        </div>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu &nbsp
+          <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto nav-justified">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+        
+          <!-- <ul class="navbar-nav ml-auto nav-justified">
+            {% for obj in category_list %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'post-list' catslug=obj.catslug %}">{{ obj.short_title }}</a>
+            </li>
+            {% endfor %}
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            {% if not request.user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="/accounts/login/">Login</a>
+            </li>
+            {% endif %}
+            {% if request.user.is_authenticated and request.user.is_staff %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'post-create' %}">Create</a>
+            </li>
+            {% endif %}
+            {% if request.user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="/accounts/logout">Logout</a>
+            </li>
+            {% endif %}
+          </ul> -->
+          
+        </div>
+      </div>
+      </div>
+    </nav>

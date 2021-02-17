@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <title>Image Upload</title>
- </head>
- <body>
-   <h1>Upload an image:</h1>
+{% extends 'capture/base.html' %}
+
+{% block head %}
+  <title>OpenCV Face Upload</title>
+{% endblock %}
+
+{% block content %}
+
+<h1>Upload an image:</h1>
    <form method="POST" enctype="multipart/form-data">
      {% csrf_token %}
      {{ form.as_p }}
@@ -16,5 +17,5 @@
      <p>Uploaded file: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
    {% endif %}
    <p><a href="/">Return home</a></p>
- </body>
-</html>
+
+{% endblock content %}

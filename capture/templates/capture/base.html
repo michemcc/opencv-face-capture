@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "capture/head.html" %}
+
+{% block head %}
+    <title></title>
+    <meta name="description" content="">
+{% endblock %}
+
+<body>
+
+    {% include 'capture/header.html' %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% include 'capture/footer.html' %}
+    {% include 'capture/scripts.html' %}
+
+</body>
+
+</html>

@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Detect Face</title>
-  </head>
-  <body>
-    <h1>Detect a face:</h1>
-    <form method="POST" enctype="multipart/form-data">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit">Upload</button>
-    </form>
+{% extends 'capture/base.html' %}
 
-    {% if post %}
-      <img src="{{ post.document.url }}">
-      <p>Uploaded file: <a href="{{ post.document.url }}">{{ post.document }}</a></p>
-    {% endif %}
+{% block head %}
+  <title>OpenCV Face Detect</title>
+{% endblock %}
 
-    <p><a href="/">Return home</a></p>
+{% block content %}
 
-  </body>
-</html>
+<h1>Detect a face:</h1>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+
+  {% if post %}
+    <img src="{{ post.document.url }}">
+    <p>Uploaded file: <a href="{{ post.document.url }}">{{ post.document }}</a></p>
+  {% endif %}
+
+  <p><a href="/">Return home</a></p>
+
+{% endblock content %}
