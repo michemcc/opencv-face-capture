@@ -1,21 +1,17 @@
 {% extends 'capture/base.html' %}
-
 {% block head %}
   <title>OpenCV Face Upload</title>
 {% endblock %}
-
 {% block content %}
-
 <h1>Upload an image:</h1>
    <form method="POST" enctype="multipart/form-data">
      {% csrf_token %}
      {{ form.as_p }}
-     <button type="submit">Upload</button>
+     <button type="submit">Submit</button>
    </form>
    {% if uploaded_file_url %}
      <img src="{{ uploaded_file_url }}">
      <p>Uploaded file: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
    {% endif %}
    <p><a href="/">Return home</a></p>
-
 {% endblock content %}
