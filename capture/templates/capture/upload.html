@@ -3,7 +3,7 @@
   <title>OpenCV Face Upload</title>
 {% endblock %}
 {% block content %}
-<h1>Upload an image:</h1>
+<h1>Upload image:</h1>
    <form method="POST" enctype="multipart/form-data">
      {% csrf_token %}
      {{ form.as_p }}
